@@ -8,6 +8,7 @@ Details such as implementation and the data science theory behind the model can 
 
 As part of company protocols all raw company data were removed from this repository, and thus as the code were tailor-made based on the company's data it may be rather difficult to understand what is going on - the "Data Science Process" in Documentation_(LR).pdf may better represent my ideas. As the output of the scripts contained client names, these were also removed when pushed to Github.
 
+The model has a 47.7% True Positive rate
 
 The Flask folder contains scripts which support a Flask Web application interface for the predictor.
 
