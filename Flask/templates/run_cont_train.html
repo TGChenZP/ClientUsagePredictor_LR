@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{%block title %}Run Continuous Training Only{% endblock %}
+
+{% block content %}
+<img src="/static/logo.png" width = "300" height = "100">
+    <h1>Run the Programme for Continuous Training</h1>
+    Date of today: {{['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][date.weekday()]}} {{date.day}}/{{date.month}}/{{date.year}}
+    <p>Current Week: {{currweek}}</p>
+    <form method = "post">
+        <p>
+            Run Date:
+            <input type="text" name = "run_date">
+        </p>
+        <button type="submit">Run</button>
+        <p>
+            Note: The function will be run for the particular week that contains this date. Please put in format of [d]d/[m]m/yyyy. 
+        </p>
+        
+    </form>
+    <p><a href='{{url_for("run_weekly")}}'>Back</a>
+    <p>
+        <a href = "{{ url_for('home') }}">Home</a>
+    </p>
+{% endblock %}

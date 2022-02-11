@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{%block title %}Client Usage Predictor{% endblock %}
+
+{% block content %}
+    <img src="/static/logo.png" width = "300" height = "100">
+    <h1>Client Usage Predictor</h1>
+    <p>Date of today: {{['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][date.weekday()]}} {{date.day}}/{{date.month}}/{{date.year}}</p>
+    <p>Current Week: {{currweek}}</p>
+    <h2>Accuracy</h2>
+    <p>Accuracy for predicting increase: {{TruePos1}}%</p>
+    <p>Accuracy for predicting decrease: {{TruePos2}}%</p>
+    <h2>Menu</h2>
+    <p><a href="{{ url_for('initial')}}">Initialise the Programme</a></p>
+    <p><a href="{{ url_for('run_weekly')}}">Run the Programme Weekly</a></p>
+    <p><a href="{{ url_for('view_files')}}">View Files</a></p>
+    <p><a href="{{ url_for('view_mapping')}}">View Client Mapping</a></p>
+    
+    <h2>Instructions</h2>
+    <p>
+    </p>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{%block title %}Weekly Run Complete{% endblock %}
+
+{% block content %}
+    <img src="/static/logo.png" width = "300" height = "100">
+    <p>Run Complete</p>
+    <p>Please click to view the files produced this week</p>
+    <p>
+        <a href = "{{ url_for('view_recent_predictions') }}">View the predictions for next week</a>
+    </p>
+    <p>
+        <a href = "{{ url_for('view_recent_statistics') }}">View the statistics for this week</a>
+    </p>
+    <p>
+        <a href = "{{ url_for('browse_retro') }}">Browse Retrospective</a>
+    </p>
+
+    <p>
+        <a href = "{{ url_for('home') }}">Home</a>
+    </p>
+
+{% endblock %}
