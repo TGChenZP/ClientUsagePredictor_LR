@@ -2,7 +2,7 @@
 
 This was a project undertaken as part of an Internship in July-October 2021 and further developed in Casual Work period of November 2021-February 2022 and predicts whether a client will significantly increase or decrease their use of the company's online service this week, based on the data collected in the previous week. 
 
-The module contains three .py scripts (one more in the folder Initial.py).
+The module contains two .py scripts (one more in the folder Initial.py).
 
 Details such as implementation and the data science theory behind the model can be found in Documentation_(LR).pdf.
 
