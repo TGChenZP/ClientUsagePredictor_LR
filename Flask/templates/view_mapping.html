@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{%block title %}Client Mapping{% endblock %}
+
+{% block content %}
+    <img src="/static/logo.png" width = "300" height = "100">
+    <h1>Client Mapping</h1>
+
+    <p>
+        <a href = "{{ url_for('home') }}">Home</a>
+    </p>
+
+    {% for table in tables %}
+        {{ titles[loop.index] }}
+        {{ table|safe }}
+    {% endfor %}
+    <p>
+        <a href = "{{ url_for('home') }}">Home</a>
+    </p>
+    
+    
+{% endblock %}

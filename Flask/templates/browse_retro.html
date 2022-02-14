@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{%block title %}Browse Retrospectives{% endblock %}
+
+{% block content %}
+    <img src="/static/logo.png" width = "300" height = "100">
+    <h1>Please select which week's retrospective file you would like to view</h1>
+    Date of today: {{['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][date.weekday()]}} {{date.day}}/{{date.month}}/{{date.year}}
+    <p>Current Week: {{currweek}}</p>
+    <form method = "post">
+        <p>
+            Run Date:
+            <input type="text" name = "date">
+        </p>
+        <button type="submit">View the retrospective file of the week which contains this day</button>
+        <p>
+            Note: Please put in format of [d]d/[m]m/yyyy. You can also type in a week number (int) instead. (The retro file in week x will match the actual performance of week x+1 with the predictions made in week x about week x+1)
+        </p>
+        
+    </form>
+    
+    <p>    </p>
+    <p>
+        <a href = "{{ url_for('view_files') }}">Back</a>
+    </p>
+    <p>
+        <a href = "{{ url_for('home') }}">Home</a>
+    </p>
+{% endblock %}

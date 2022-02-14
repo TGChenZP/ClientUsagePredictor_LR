@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{%block title %}Choose what you want to view{% endblock %}
+
+{% block content %}
+    <img src="/static/logo.png" width = "300" height = "100">
+    <h1>Which file would you like to view</h1>
+    Date of today: {{['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][date.weekday()]}} {{date.day}}/{{date.month}}/{{date.year}}
+    <p>Current Week: {{currweek}}</p>
+    <p></p>
+    <p> <a href="{{url_for('browse_predictions')}}">Predictions</a></p>
+    <p> <a href="{{url_for('browse_statistics')}}">Statistics</a></p>
+    <p> <a href="{{url_for('browse_retro')}}">View Retrospective</a></p>
+    <p></p>
+    <p>
+        <a href = "{{ url_for('home') }}">Home</a>
+    </p>
+{% endblock %}

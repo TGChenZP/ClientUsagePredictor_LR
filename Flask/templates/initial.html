@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{%block title %}Initialising{% endblock %}
+
+{% block content %}
+    <img src="/static/logo.png" width = "300" height = "100">
+    <h1>Initialising the Programme</h1>
+    Date of today: {{['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][date.weekday()]}} {{date.day}}/{{date.month}}/{{date.year}}
+    <form method = "post">
+        <p>
+            Initialisation Date:
+            <input type="text" name = "init_date">
+        </p>
+        <button type="submit">Initialise</button>
+        <p>
+            Note: this should be the date of Sunday of the last full week for which we have data for. Please put in format of [d]d/[m]m/yyyy.
+            This process may takes a long time (roughly 10 minutes) to run. Please be patient and don't refresh the page - it will redirect to a new page when the training is complete.
+        </p>
+        
+    </form>
+    
+    {% if initialised %}
+        <p>
+            WARNING: YOU HAVE ALREADY INITIALISED THE PROGRAMME. DOING SO AGAIN LIKELY WILL DISRUPT THE PROPER FUNCTIONALITY OF THE PROGRAMME. 
+        </p>
+    {% endif %}
+
+    <p>
+        <a href = "{{ url_for('home') }}">Home</a>
+    </p>
+
+{% endblock %}

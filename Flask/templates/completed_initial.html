@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{%block title %}Initial Training Complete{% endblock %}
+
+{% block content %}
+    <img src="/static/logo.png" width = "300" height = "100">
+    <p>Initial Training Complete</p>
+
+    <p>
+        <a href = "{{ url_for('home') }}">Home</a>
+    </p>
+
+{% endblock %}
