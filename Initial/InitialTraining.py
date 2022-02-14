@@ -1,5 +1,5 @@
 ### CLIENT USAGE PREDICTOR (LR) - initial training script
-### Code produced by Lang (Ron) Chen Nov-Feb 2021 for Lucidity Software
+### Code produced by Lang (Ron) Chen Jul-Dec 2021 for Lucidity Software
 """ Wrangles initial raw data and outputs predictor objects for predicting the client usage trend for the upcoming week """
 
 # Input: 
