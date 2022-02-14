@@ -1,5 +1,5 @@
 ### CLIENT USAGE PREDICTOR - prediction script
-### Code produced by Lang (Ron) Chen August-October 2021 for Lucidity Software
+### Code produced by Lang (Ron) Chen July-December 2021 for Lucidity Software
 """ Wrangles raw data of recent weeks, appends it to the previous wrangled data and outputs predictions for upcoming week """
 
 # Input:
